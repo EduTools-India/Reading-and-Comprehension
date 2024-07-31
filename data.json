@@ -1,0 +1,40 @@
+{
+    "English": {
+        "Level1": {
+            "passage": "Mittu was a parrot. A green parrot with a red beak. One day Mittu was flying...",
+            "questions": [
+                { "question": "1. What color was Mittu?", "options": ["Blue", "Green", "Red", "Yellow"], "correct": 1 },
+                { "question": "2. Who was sitting on the tree when Mittu flew down?", "options": ["A parrot", "An owl", "A sparrow", "A crow"], "correct": 3 },
+                { "question": "3. What did Mittu use to scare the crow away?", "options": ["A stick", "A stone", "A balloon", "A leaf"], "correct": 2 },
+                { "question": "4. Why did Mittu fly away from the tree initially?", "options": ["He did not like the mango", "He was afraid of the crow", "He was tired", "He saw another mango"], "correct": 1 },
+                { "question": "5. How did Mittu burst the balloon?", "options": ["With his claws", "With his beak", "With his wings", "With a stick"], "correct": 1 },
+                { "question": "6. What did the crow think when the balloon burst?", "options": ["Someone is throwing stones", "A big gun is after him", "It was raining", "Mittu is playing"], "correct": 1 },
+                { "question": "7. What does Mittu's clever use of the balloon signify about his character?", "options": ["His strength", "His bravery", "His intelligence", "His kindness"], "correct": 2 },
+                { "question": "8. What did Mittu see on the tree?", "options": ["Apple", "Mango", "Banana", "Balloon"], "correct": 1 },
+                { "question": "9. What can be inferred about the crow's personality based on his actions in the story?", "options": ["He is brave and fearless", "He is timid and easily scared", "He is friendly and kind", "He is curious and playful"], "correct": 1 },
+                { "question": "10. Analyze how Mittu's feelings change throughout the story.", "options": ["Mittu starts happy, becomes scared, and ends happy", "Mittu starts scared, becomes angry, and ends sad", "Mittu starts indifferent, becomes excited, and ends sad", "Mittu starts happy, becomes sad, and ends indifferent"], "correct": 0 }
+            ]
+        }
+    },
+    "Hindi": {
+        "Level1": {
+            "passage": "यह एक हिंदी प्रारंभिक मार्ग है।",
+            "questions": [
+                { "question": "मुख्य विचार क्या है?", "options": ["विकल्प 1", "विकल्प 2", "विकल्प 3"], "correct": 0 },
+                { "question": "एक महत्वपूर्ण विवरण क्या है?", "options": ["विवरण 1", "विवरण 2", "विवरण 3"], "correct": 1 }
+            ]
+        }
+    },
+    "Marathi": {
+        "Level1": {
+            "passage": "गरुडाकडे एकदा सर्व पक्षी जेवायला आले...",
+            "questions": [
+                { "question": "1. कोण गरुडाकडे जेवायला आले?", "options": ["माणसे", "प्राणी", "पक्षी", "मासे" ], "correct": 2 },
+                { "question": "2. कोकिळा कसा गातो?", "options": ["सुंदर", "आवाज कर्कश", "गाता येत नाही", "फार कर्कश" ], "correct": 0 },
+                { "question": "3. गरुड, हंस आणि पोपट कोकिळाकडे का गेले?", "options": ["जेवायला", "चिडवायला", "बोलायला", "घेऊन यायला" ], "correct": 3 },
+                { "question": "4. मोराने कोकिळाला काय सांगितले?", "options": ["तू येऊ नकोस", "तू गाऊ नकोस", "सुंदर गातोस", "तुझा रंग काळा आहे" ], "correct": 2 },
+                { "question": "5. कोकिळाला का वाईट वाटले?", "options": ["मोराने वाईट बोलले", "सगळे चिडवतील", "गरुड बोलला नाही", "गाऊ येत नाही" ], "correct": 1 }
+            ]
+        }
+    }
+}
