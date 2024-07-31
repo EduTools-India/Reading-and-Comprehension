@@ -1,3 +1,52 @@
+let selectedLanguage, selectedLevel, startTime, endTime;
+let currentQuestionIndex = 0;
+let userAnswers = [];
+let data = {};
+
+// Fetching data from the JSON file
+fetch('data.json')
+    .then(response => response.json())
+    .then(jsonData => {
+        data = jsonData;
+        console.log('Data loaded:', data);
+        // Rest of your initialization code
+    })
+    .catch(error => console.error('Error loading data:', error));
+
+function selectLanguage(language) {
+    selectedLanguage = language;
+    console.log('Selected Language:', selectedLanguage);
+    document.getElementById('languageSelection').style.display = 'none';
+    document.getElementById('levelSelection').style.display = 'block';
+}
+
+function startTimer() {
+    startTime = new Date();
+    console.log('Timer started at:', startTime);
+}
+
+function stopTimer() {
+    endTime = new Date();
+    console.log('Timer stopped at:', endTime);
+    document.getElementById('readingSection').style.display = 'none';
+    document.getElementById('questionSection').style.display = 'block';
+
+    displayQuestion();
+}
+
+function selectLevel(level) {
+    selectedLevel = level;
+    console.log('Selected Level:', selectedLevel);
+    document.getElementById('levelSelection').style.display = 'none';
+    document.getElementById('readingSection').style.display = 'block';
+
+    const passage = data[selectedLanguage][selectedLevel].passage;
+    document.getElementById('passageTitle').textContent = `${selectedLanguage} - ${selectedLevel}`;
+    document.getElementById('passageText').textContent = passage;
+
+    startTimer();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
@@ -15,55 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Other event listeners can be added here in a similar fashion
 });
-
-let selectedLanguage, selectedLevel, startTime, endTime;
-let currentQuestionIndex = 0;
-let userAnswers = [];
-let data = {};
-
-// Fetching data from the JSON file
-fetch('./data.json')
-    .then(response => response.json())
-    .then(jsonData => {
-        data = jsonData;
-        console.log('Data loaded:', data);
-        // Rest of your initialization code
-    })
-    .catch(error => console.error('Error loading data:', error));
-
-function selectLanguage(language) {
-    selectedLanguage = language;
-    console.log('Selected Language:', selectedLanguage);
-    document.getElementById('languageSelection').style.display = 'none';
-    document.getElementById('levelSelection').style.display = 'block';
-}
-
-function selectLevel(level) {
-    selectedLevel = level;
-    console.log('Selected Level:', selectedLevel);
-    document.getElementById('levelSelection').style.display = 'none';
-    document.getElementById('readingSection').style.display = 'block';
-
-    const passage = data[selectedLanguage][selectedLevel].passage;
-    document.getElementById('passageTitle').textContent = `${selectedLanguage} - ${selectedLevel}`;
-    document.getElementById('passageText').textContent = passage;
-
-    startTimer();
-}
-
-function startTimer() {
-    startTime = new Date();
-    console.log('Timer started at:', startTime);
-}
-
-function stopTimer() {
-    endTime = new Date();
-    console.log('Timer stopped at:', endTime);
-    document.getElementById('readingSection').style.display = 'none';
-    document.getElementById('questionSection').style.display = 'block';
-
-    displayQuestion();
-}
 
 function displayQuestion() {
     const questionData = data[selectedLanguage][selectedLevel].questions[currentQuestionIndex];
