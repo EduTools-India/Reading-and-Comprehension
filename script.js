@@ -22,11 +22,12 @@ let userAnswers = [];
 let data = {};
 
 // Fetching data from the JSON file
-fetch('data.json')
+fetch('./data.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
-        console.log('Data loaded successfully:', data);
+        console.log('Data loaded:', data);
+        // Rest of your initialization code
     })
     .catch(error => console.error('Error loading data:', error));
 
