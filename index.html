@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Advertisement strip -->
+<div class="advertisement">
+    <span class="ad-text">EduTools India</span>
+    <a href="https://wa.me/918767407153" class="ad-link">Dr. Praveenkumar Jadhav (+91-8767407153)</a>
+  </div>
+  
+  <!-- Created by strip -->
+  <div class="created-by">
+    <span class="created-text">Created by Vaishnavi Jadhav</span>
+  </div>
+    <div id="app">
+        <div id="languageSelection" class="container">
+            <h1>Select Language</h1>
+            <button onclick="selectLanguage('English')">English</button>
+            <button onclick="selectLanguage('Hindi')">Hindi</button>  
+            <button onclick="selectLanguage('Marathi')">Marathi</button>
+        </div>
+        <div id="levelSelection" class="container" style="display:none;">
+            <h1>Select Level</h1>
+            <button onclick="selectLevel('Level1')">Level 1</button>
+            <button onclick="selectLevel('Level2')">Level 2</button>
+            <button onclick="selectLevel('Level3')">Level 3</button>
+            <button onclick="selectLevel('Level4')">Level 4</button>
+            <button onclick="selectLevel('Level5')">Level 5</button>
+            <button onclick="selectLevel('Level6')">Level 6</button>
+            <button onclick="selectLevel('Level7')">Level 7</button>
+            <button onclick="selectLevel('Level8')">Level 8</button>
+            <button onclick="selectLevel('Level9')">Level 9</button>
+            <button onclick="selectLevel('Level10')">Level 10</button>
+            <div class="back-button-container">
+                <button class="back-button" onclick="goBackToLanguageSelection()">Back to Language Selection</button>
+            </div>
+        </div>
+        <div id="readingSection" class="container" style="display:none;">
+            <h1 id="passageTitle"></h1>
+            <p id="passageText"></p>
+            <button onclick="stopTimer()">Finished Reading</button>
+            <div class="back-button-container">
+                <button class="back-button" onclick="goBackToLevelSelection()">Back to Level Selection</button>
+            </div>
+        </div>
+        <div id="questionSection" class="container" style="display:none;">
+            <h1>Questions</h1>
+            <div id="questionContainer"></div>
+            <button id="nextQuestionBtn" onclick="showNextQuestion()">Next</button>
+            <button id="submitAnswersBtn" onclick="submitAnswers()" style="display:none;">Submit</button>
+            <div class="back-button-container">
+                <button class="back-button" onclick="goBackToReadingSection()">Back to Reading Section</button>
+            </div>
+        </div>
+        <div id="resultsSection" class="container" style="display:none;">
+            <h1>Results</h1>
+            <p id="readingSpeed"></p>
+            <p id="comprehensionAccuracy"></p>
+            <div class="back-button-container">
+                <button class="back-button" onclick="goBackToLanguageSelection()">Back to Language Selection</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
